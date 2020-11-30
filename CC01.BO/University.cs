@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace CC01.BO
 {
-    public class University
+    public class Student
     {
         public string Nom { get; set; }
         public long Telephone { get; set; }
         public string Lieu { get; set; }
         public string Adresse { get; set; }
+        public int cmp = 0;
 
-        public University(string nom, long telephone, string lieu, string adresse)
+        public Student(string nom, long telephone, string lieu, string adresse)
         {
             Nom = nom;
             Telephone = telephone;
@@ -23,7 +24,7 @@ namespace CC01.BO
 
         public override bool Equals(object obj)
         {
-            return obj is University university &&
+            return obj is Student university &&
                    Nom == university.Nom &&
                    Adresse == university.Adresse;
         }
